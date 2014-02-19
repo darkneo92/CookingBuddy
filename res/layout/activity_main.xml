@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearlayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearlayout1"
+        android:layout_below="@+id/linearlayout1" >
+
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.99"
+            android:gravity="center"
+            android:text="Password:" />
+
+        <EditText
+            android:id="@+id/passfield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:password="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="124dp" >
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.99"
+            android:gravity="center"
+            android:text="Username:" />
+
+        <EditText
+            android:id="@+id/userfield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter Username" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearlayout1"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/linearlayout1"
+        android:layout_marginTop="67dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="Welcome to Login Counter" />
+
+	<LinearLayout
+	    android:id="@+id/linearlayout3"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_below="@+id/linearlayout2"
+	    android:orientation="horizontal" >
+        
+	    <Button
+	        android:id="@+id/loginbutton"
+	        android:layout_width="wrap_content"
+	   		android:layout_height="wrap_content"
+	   		android:layout_weight="1"
+	   		android:text="Login"
+	   		android:onClick="login">
+	   	</Button>
+
+	    <Button
+	        android:id="@+id/adduserbutton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Add User"
+	        android:layout_weight="1"
+	        android:onClick="add" />
+        	
+	</LinearLayout>
+
+</RelativeLayout>
